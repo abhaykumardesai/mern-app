@@ -4,17 +4,16 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-  "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
-  "build": "cd frontend && npm install && npm run build",
-  "start": "cross-env NODE_ENV=production node backend/server.js"
-},
-
+    "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cross-env NODE_ENV=production node backend/server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/react": "^2.10.6",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
