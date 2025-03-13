@@ -27,5 +27,18 @@ export const useProductStore = create((set) => ({
         const res = await fetch("/api/products");
         const data = await res.json();
         set({products: data.data});
+    },
+
+    deleteProduct: async (pid) => {
+        const res = await fetch(`/api/products/${pid}`,{
+            method: 'DELETE',
+        });
+        const data = await res.json();
+        if(!data.success) return {success: false, message: data.message};
+
+
+        //refresh the page when we delete an item
+        set(state => ({products: state.products.filter(products => products._id !== pid)})); 
+        return {success: true, message:data.message};
     }
 }))

@@ -39,23 +39,21 @@ const {fetchProducts,products} = useProductStore();
             <ProductCard key = {product._id} product = {product}/>
           ))}
         </SimpleGrid>
-
-
-
-
-        <Text
-        fontSize='x1'
-        textAlign={"center"}
-        fontWeight={'bold'}
-        color={'gray.500'}
-        >
-          No Products Found {" "}
-          <Link to = {"/create"}>
-          <Text as='span' color={'blue.500'} _hover={{ textDecoration: "underline"}}>
-            Create Product
+        {products.length == 0 && (
+          <Text
+          fontSize='x1'
+          textAlign={"center"}
+          fontWeight={'bold'}
+          color={'gray.500'}
+          >
+            No Products Found 🥺 {" "}
+            <Link to = {"/create"}>
+            <Text as='span' color={'blue.500'} _hover={{ textDecoration: "underline"}}>
+              Create Product
+            </Text>
+            </Link>
           </Text>
-          </Link>
-        </Text>
+        )}
       </VStack>
     </Container>
   )
