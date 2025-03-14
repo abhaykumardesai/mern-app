@@ -23,8 +23,11 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-// Start the server **only once**
 app.listen(PORT, async () => {
     await connectDB();
     console.log(`Server is running at http://localhost:${PORT}`);
 });
+
+
+// ******************run *******************
+//    npm run start commamd to start the server
