@@ -6,17 +6,15 @@
 
 ## 📚 Table of Contents
 
-- [📖 About the Project]
-- [✨ Features]
-- [🛠️ Technologies Used]
-- [🚀 Getting Started]
-  - [✅ Prerequisites]
-  - [⚙️ Installation]
-- [▶️ Running the Application]
-- [🌐 API Endpoints]
-- [📁 Project Structure]
-- [🤝 Contributing]
-- [📧 Contact]
+- 📖 About the Project
+- ✨ Features
+- 🛠️ Technologies Used
+- 🚀 Getting Started
+  - ✅ Prerequisites
+  - ⚙️ Installation
+- ▶️ Running the Application
+- 🌐 API Endpoints
+- 📁 Project Structure
 
 ---
 
@@ -77,3 +75,64 @@ npm install
 # 4. Navigate to the client and install front-end dependencies
 cd client
 npm install
+
+# 5. Return to the root directory
+cd ..
+
+```
+## ▶️ Running the Application
+Once all dependencies are installed, follow these steps to run both the backend and frontend:
+### 🖥️ Backend (Server)
+From the root directory
+```bash
+npm run server
+```
+> This will start the backend server (usually on http://localhost:5000)
+
+### 🌐 Frontend (Client)
+From the /client directory
+```bash
+cd client
+npm start
+```
+> This will launch the React app in your default browser at http://localhost:3000
+
+
+## 🌐 API Endpoints
+
+Here are some common RESTful endpoints used in the backend:
+
+| Method | Endpoint        | Description             |
+|--------|------------------|-------------------------|
+| GET    | `/api/items`     | Fetch all items         |
+| POST   | `/api/items`     | Create a new item       |
+| PUT    | `/api/items/:id` | Update an existing item |
+| DELETE | `/api/items/:id` | Delete an item          |
+
+> These endpoints interact with MongoDB via Mongoose and return JSON responses.
+
+## 📁 Project Structure
+
+```plaintext
+mern-app/
+├── client/               # React frontend
+│   ├── public/
+│   └── src/
+│       ├── components/   # Reusable UI components
+│       ├── pages/        # Page-level components
+│       ├── App.js        # Main React app file
+│       └── index.js      # Entry point for React
+├── models/               # Mongoose schemas
+│   └── Item.js
+├── routes/               # Express route handlers
+│   └── items.js
+├── .env                  # Environment variables (e.g., DB URI, port)
+├── server.js             # Entry point for the backend
+├── package.json          # Backend dependencies and scripts
+├── README.md             # Project documentation
+
+
+
+
+
+
