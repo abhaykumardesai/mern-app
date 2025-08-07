@@ -1,4 +1,18 @@
-node_modules/
+# Dependencies
+/node_modules
+/client/node_modules
+
+# Environment Variables
 .env
+
+# Editor Settings
 .vscode/
-package-lock.json
+
+# Production Build Folders
+/build
+/client/build
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
